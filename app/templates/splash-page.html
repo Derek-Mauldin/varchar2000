@@ -3,8 +3,23 @@
 		<h1>VarChar 2000</h1>
 	</div>
 
-	<form>
-		<h3>Input Text</h3>
-		<textarea rows="10" cols="100"></textarea>
-	</form>
+	<div class="row" id="displayArea">
+
+		<div class="col-md-8">
+			<form>
+				<h3>Input Text</h3>
+				<textarea (keyup)="countChar(text)" name="varChar" rows="10" cols="100"  maxlength="2000" placeholder="enter up to 2000 characters" #text></textarea>
+			</form>
+		</div>
+		<div  class="col-md-4">
+			<h2>Characters Left</h2>
+			<div>
+				<h2>{{ charsLeft }}</h2>
+				<br>
+				<h3>{{ commentString }}</h3>
+			</div>
+		</div>
+
+	</div> <!--row-->
+
 </div>
